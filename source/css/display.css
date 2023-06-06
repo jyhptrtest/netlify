@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c19267;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.display-document {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1296px;
+    height: 100vh;
+    margin: auto;
+}
+
+.display-bakeware {
+    width: 100%;
+    margin: auto;
+    aspect-ratio: 677/348;
+    overflow: hidden;
+    border: 1vw solid #dda653;
+    background-color: #fcdea5;
+    border-radius: 5vw;
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+}
+
+.display-cookie {
+    margin: auto;
+    width: calc(100% / 3);
+    height: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+}
+
+.display-cookie>img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    align-items: center;
+}
+
+.display-cookie>img:hover {
+    cursor: pointer;
+    filter: opacity(50%);
+}
+
+.position-relative {
+    position: relative;
+}
+
+#selected-cookie0, #selected-cookie1, #selected-cookie2 {
+    position: absolute;
+    height: 120%;
+    width: auto;
+    top: calc(-20%);
+    transform: translate(-50%, 0);
+}
+
+#selected-cookie0 {
+    left: calc(30%);
+}
+
+#selected-cookie1 {
+    left: calc(50%);
+}
+
+#selected-cookie2 {
+    left: calc(70%);
+}
+
+.display-none {
+    display: none;
+}
+
+.big-card {
+    position: absolute;
+    height: 200%;
+    top: -220%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    box-sizing:border-box;
+}
+
+.loading-animation {
+    background: linear-gradient(to right, #ecce95 0%, #ecce95 50%, #fcdea5 50%, #fcdea5 100%);
+    background-size: 200% 100%;
+    animation: loading-animation 2s linear infinite;
+}
+
+@keyframes loading-animation {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes move-card-0 {
+    100% {
+        transform: translate(-50%, 0) translateX(-100%) translateY(80%) scale(0.6);
+    }
+}
+
+@keyframes move-card-1 {
+    100% {
+        transform: translate(-50%, 0) translateX(0%) translateY(80%) scale(0.6);
+    }
+}
+
+@keyframes move-card-2 {
+    100% {
+        transform: translate(-50%, 0) translateX(100%) translateY(80%) scale(0.6);
+    }
+}
